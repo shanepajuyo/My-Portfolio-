@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shane D. Pajuyo | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: black;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    nav.sidebar {
+      width: 250px;
+      background-color:powderblue;
+      color: steelblue;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    nav.sidebar a {
+      color: black;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    nav.sidebar a:hover,
+    nav.sidebar a.active {
+      color: dodgerblue;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      flex: 1;
+      padding: 2rem;
+      background-color:white;
+    }
+
+    header {
+      background-color:powderblue;
+      color: black;
+      padding: 3rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .header-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: left;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-text h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
+
+    .header-text p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: powderblue;
+      border-radius: 10px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      color: black;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid black;
+      padding-bottom: 0.4rem;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      color: black;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      color: black;
+    }
+
+    .card ul li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .card ul li strong {
+      color: black;
+    }
+
+    .cert-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid black;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .sub-heading {
+      font-weight: 600;
+      color: tan;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color:steelblue;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      nav.sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Sample Project</a>
+    <a href="#contact">Contact me</a>
+  </nav>
+
+  <div class="main-content">
+
+    <header id="home">
+      <div class="header-container">
+        <img src="https://i.supaimg.com/cf3f4d34-c5a5-43b5-b4a4-6782ad97e05e/475fef00-7634-478a-aec1-eb7b693a5559.jpg" alt="profile-pic" class="profile-pic">
+        <div class="header-text">
+          <h1>Shane D. Pajuyo</h1>
+          <p>A 1st year BSIT student</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <section id="about" class="card">
+        <h2>About me</h2>
+        <p>I’m a student who values curiosity, creativity, and peace. I loves exploring new ideas and learning different skills. I believe in kindness and teamwork, and I find joy in connecting with people and sharing ideas. My goals are to strengthen my skills in web development and C programming, finish my school projects with dedication, and continue growing both academically and personally. More than achievements, I aim to inspire others and live a life that spreads positivity and peace.</p>
+      </section>
+
+      <section class="card">
+        <h2>Skills</h2>
+        <p>One of my key skills is teamwork. I work effectively with others by listening, sharing ideas, and contributing to common goals. Collaboration allows me to learn from different perspectives, strengthen problem-solving, and achieve results that are more impactful than individual efforts alone. I value respect, responsibility, and clear communication, which help create a positive environment where everyone can succeed together.</p>
+      </section>
+
+      <section class="card">
+        <h2>Interest</h2>
+        <p>One of my interests is reading and exploring creative ideas. I enjoy stories, articles, and learning materials because they inspire me to think deeply and discover new perspectives. I’m also interested in coding and web development, which challenge me to be creative while solving problems. These interests keep me motivated to grow, share positivity, and live with peace and kindness in everything I do.</p>
+      </section>
+
+      <section class="card">
+        <h2>Achievements</h2>
+        <ul>
+          <li>
+            <strong>Self-Paced Learning:</strong> Completed introductory C programming exercises and modules through SoloLearn.
+            <img src="https://i.supaimg.com/cf3f4d34-c5a5-43b5-b4a4-6782ad97e05e/311a30e4-acc3-40a7-8a5c-e216f72f9e32.jpg" alt="Certificate of Completion" class="cert-image" width="300">
+          </li>
+          <li>
+            <strong>Academic Honors:</strong> Graduated and maintained high academic standing with honors during high school.
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" class="card">
+        <h2>Experience & Practical Projects</h2>
+        
+        <p class="sub-heading">Web Development & Coding Projects:</p>
+        <ul>
+          <li>Designed and coded basic web pages using HTML and CSS, focusing on clean page structure and responsive layouts.</li>
+          <li>Solved fundamental C programming exercises and logic problems through guided coursework and self-paced modules on SoloLearn.</li>
+        </ul>
+
+        <p class="sub-heading">Digital Graphics & Design Work:</p>
+        <ul>
+          <li>Created digital illustrations, graphics, and visual layouts utilizing background skills from ICT Animation.</li>
+          <li>Enhanced photo quality, lighting, and visual styling using photo editing and AI image generation tools.</li>
+        </ul>
+
+        <p class="sub-heading">Academic & Hands-On Coursework:</p>
+        <ul>
+          <li>Completed manual statistical computations, data analysis, and mathematical problem-solving for academic requirements.</li>
+          <li>Prepared handwritten code and algorithm logic for C, HTML, and CSS written examinations.</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Sample Project</h2>
+        <p>
+          <strong>Personal Portfolio Website:</strong> A responsive web page designed using HTML and CSS to showcase personal background, technical skills, interests, and academic achievements.
+        </p>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact me</h2>
+        <p>
+          Feel free to reach out for collaborations, school projects, or discussions about technology and web development! You can connect with me through my student email or social channels.
+          Email:shanepajuyo286@gmail.com
+        </p>
+      </section>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Personal Portfolio. Built with HTML & CSS.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
