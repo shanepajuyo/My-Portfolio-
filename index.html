@@ -1,283 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shane D. Pajuyo | Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: black;
-      display: flex;
-      min-height: 100vh;
-    }
-
-    nav.sidebar {
-      width: 250px;
-      background-color:powderblue;
-      color: steelblue;
-      padding: 2.5rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      position: fixed;
-      height: 100%;
-      overflow-y: auto;
-      z-index: 100;
-    }
-
-    nav.sidebar a {
-      color: black;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-
-    nav.sidebar a:hover,
-    nav.sidebar a.active {
-      color: dodgerblue;
-    }
-
-    .main-content {
-      margin-left: 250px;
-      flex: 1;
-      padding: 2rem;
-      background-color:white;
-    }
-
-    header {
-      background-color:powderblue;
-      color: black;
-      padding: 3rem 1.5rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-    }
-
-    .header-container {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      align-items: left;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      text-align: left;
-    }
-
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .header-text h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.3rem;
-      text-align: center;
-    }
-
-    .header-text p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: powderblue;
-      border-radius: 10px;
-      padding: 1.8rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .card h2 {
-      color: black;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid black;
-      padding-bottom: 0.4rem;
-      font-size: 1.4rem;
-    }
-
-    .card p {
-      color: black;
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .card ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      color: black;
-    }
-
-    .card ul li {
-      margin-bottom: 0.8rem;
-      line-height: 1.6;
-    }
-
-    .card ul li strong {
-      color: black;
-    }
-
-    .cert-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid black;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .sub-heading {
-      font-weight: 600;
-      color: tan;
-      margin-top: 1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      color:steelblue;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      nav.sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        padding: 1rem;
-      }
-      .main-content {
-        margin-left: 0;
-        padding: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane D. Pajuyo | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <nav class="sidebar">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Sample Project</a>
-    <a href="#contact">Contact me</a>
-  </nav>
-
-  <div class="main-content">
-
-    <header id="home">
-      <div class="header-container">
-        <img src="https://i.supaimg.com/cf3f4d34-c5a5-43b5-b4a4-6782ad97e05e/475fef00-7634-478a-aec1-eb7b693a5559.jpg" alt="profile-pic" class="profile-pic">
-        <div class="header-text">
-          <h1>Shane D. Pajuyo</h1>
-          <p>A 1st year BSIT student</p>
-        </div>
-      </div>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Shane<span class="dot">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-pill">
+                    <span class="pulse-dot"></span> Welcome to my digital space
+                </div>
+                <h1>Hi, I'm <span class="gradient-text">Shane D. Pajuyo</span></h1>
+                <p class="hero-subtitle">A 1st year BSIT student</p>
+                <p class="hero-desc">Passionate about blending creativity, clean design, and continuous learning to build meaningful web experiences.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Explore Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="image-frame">
+                    <img src="https://i.supaimg.com/cf3f4d34-c5a5-43b5-b4a4-6782ad97e05e/475fef00-7634-478a-aec1-eb7b693a5559.jpg" alt="Shane D. Pajuyo" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <section id="about" class="card">
-        <h2>About me</h2>
-        <p>I’m a student who values curiosity, creativity, and peace. I loves exploring new ideas and learning different skills. I believe in kindness and teamwork, and I find joy in connecting with people and sharing ideas. My goals are to strengthen my skills in web development and C programming, finish my school projects with dedication, and continue growing both academically and personally. More than achievements, I aim to inspire others and live a life that spreads positivity and peace.</p>
-      </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="about-card glass-panel">
+                <p class="about-text">
+                    I’m a student who values curiosity, creativity, and peace. I love exploring new ideas and learning different skills. I believe in kindness and teamwork, and I find joy in connecting with people and sharing ideas. My goals are to strengthen my skills in web development and C programming, finish my school projects with dedication, and continue growing both academically and personally. More than achievements, I aim to inspire others and live a life that spreads positivity and peace.
+                </p>
+                
+                <div class="about-grid">
+                    <!-- Interest -->
+                    <div class="info-box">
+                        <h3>Interest</h3>
+                        <p>One of my interests is reading and exploring creative ideas. I enjoy stories, articles, and learning materials because they inspire me to think deeply and discover new perspectives. I’m also interested in coding and web development, which challenge me to be creative while solving problems. These interests keep me motivated to grow, share positivity, and live with peace and kindness in everything I do.</p>
+                    </div>
 
-      <section class="card">
-        <h2>Skills</h2>
-        <p>One of my key skills is teamwork. I work effectively with others by listening, sharing ideas, and contributing to common goals. Collaboration allows me to learn from different perspectives, strengthen problem-solving, and achieve results that are more impactful than individual efforts alone. I value respect, responsibility, and clear communication, which help create a positive environment where everyone can succeed together.</p>
-      </section>
+                    <!-- Achievements -->
+                    <div class="info-box">
+                        <h3>Achievements</h3>
+                        <ul class="achievements-list">
+                            <li>
+                                <strong>Self-Paced Learning:</strong> Completed introductory C programming exercises and modules through SoloLearn.
+                                <div class="cert-preview-container">
+                                    <p class="cert-label">Certificate of Completion:</p>
+                                    <img src="https://i.supaimg.com/cf3f4d34-c5a5-43b5-b4a4-6782ad97e05e/311a30e4-acc3-40a7-8a5c-e216f72f9e32.jpg" alt="SoloLearn Certificate of Completion" class="cert-img">
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Academic Honors:</strong> Graduated and maintained high academic standing with honors during high school.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <section class="card">
-        <h2>Interest</h2>
-        <p>One of my interests is reading and exploring creative ideas. I enjoy stories, articles, and learning materials because they inspire me to think deeply and discover new perspectives. I’m also interested in coding and web development, which challenge me to be creative while solving problems. These interests keep me motivated to grow, share positivity, and live with peace and kindness in everything I do.</p>
-      </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-tint">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Competency</span>
+                <h2 class="section-title">Skills</h2>
+            </div>
+            
+            <div class="skill-highlight glass-panel">
+                <div class="skill-badge">Teamwork & Collaboration</div>
+                <p>
+                    One of my key skills is teamwork. I work effectively with others by listening, sharing ideas, and contributing to common goals. Collaboration allows me to learn from different perspectives, strengthen problem-solving, and achieve results that are more impactful than individual efforts alone. I value respect, responsibility, and clear communication, which help create a positive environment where everyone can succeed together.
+                </p>
+            </div>
+        </div>
+    </section>
 
-      <section class="card">
-        <h2>Achievements</h2>
-        <ul>
-          <li>
-            <strong>Self-Paced Learning:</strong> Completed introductory C programming exercises and modules through SoloLearn.
-            <img src="https://i.supaimg.com/cf3f4d34-c5a5-43b5-b4a4-6782ad97e05e/311a30e4-acc3-40a7-8a5c-e216f72f9e32.jpg" alt="Certificate of Completion" class="cert-image" width="300">
-          </li>
-          <li>
-            <strong>Academic Honors:</strong> Graduated and maintained high academic standing with honors during high school.
-          </li>
-        </ul>
-      </section>
+    <!-- Projects Section (Combined with Experience & Practical Work) -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio & Growth</span>
+                <h2 class="section-title">Projects & Experience</h2>
+            </div>
+            
+            <div class="experience-grid">
+                <!-- Web Dev -->
+                <div class="card glass-panel">
+                    <h3>Web Development & Coding Projects</h3>
+                    <ul>
+                        <li>Designed and coded basic web pages using HTML and CSS, focusing on clean page structure and responsive layouts.</li>
+                        <li>Solved fundamental C programming exercises and logic problems through guided coursework and self-paced modules on SoloLearn.</li>
+                    </ul>
+                </div>
 
-      <section id="experience" class="card">
-        <h2>Experience & Practical Projects</h2>
-        
-        <p class="sub-heading">Web Development & Coding Projects:</p>
-        <ul>
-          <li>Designed and coded basic web pages using HTML and CSS, focusing on clean page structure and responsive layouts.</li>
-          <li>Solved fundamental C programming exercises and logic problems through guided coursework and self-paced modules on SoloLearn.</li>
-        </ul>
+                <!-- Digital Graphics -->
+                <div class="card glass-panel">
+                    <h3>Digital Graphics & Design Work</h3>
+                    <ul>
+                        <li>Created digital illustrations, graphics, and visual layouts utilizing background skills from ICT Animation.</li>
+                        <li>Enhanced photo quality, lighting, and visual styling using photo editing and AI image generation tools.</li>
+                    </ul>
+                </div>
 
-        <p class="sub-heading">Digital Graphics & Design Work:</p>
-        <ul>
-          <li>Created digital illustrations, graphics, and visual layouts utilizing background skills from ICT Animation.</li>
-          <li>Enhanced photo quality, lighting, and visual styling using photo editing and AI image generation tools.</li>
-        </ul>
+                <!-- Academic -->
+                <div class="card glass-panel">
+                    <h3>Academic & Hands-On Coursework</h3>
+                    <ul>
+                        <li>Completed manual statistical computations, data analysis, and mathematical problem-solving for academic requirements.</li>
+                        <li>Prepared handwritten code and algorithm logic for C, HTML, and CSS written examinations.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <p class="sub-heading">Academic & Hands-On Coursework:</p>
-        <ul>
-          <li>Completed manual statistical computations, data analysis, and mathematical problem-solving for academic requirements.</li>
-          <li>Prepared handwritten code and algorithm logic for C, HTML, and CSS written examinations.</li>
-        </ul>
-      </section>
+            <!-- Sample Project -->
+            <div class="sample-project glass-panel">
+                <div class="sample-project-content">
+                    <span class="tag">Featured Project</span>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive web page designed using HTML and CSS to showcase personal background, technical skills, interests, and academic achievements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <section id="projects" class="card">
-        <h2>Sample Project</h2>
-        <p>
-          <strong>Personal Portfolio Website:</strong> A responsive web page designed using HTML and CSS to showcase personal background, technical skills, interests, and academic achievements.
-        </p>
-      </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-tint">
+        <div class="container text-center">
+            <div class="section-header">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <p class="contact-intro">Feel free to reach out for collaborations, school projects, or discussions about technology and web development! You can connect with me through my student email.</p>
+            
+            <div class="email-box glass-panel">
+                <div class="email-details">
+                    <span class="email-label">Student Email</span>
+                    <a href="mailto:shanepajuyo286@gmail.com">shanepajuyo286@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <section id="contact" class="card">
-        <h2>Contact me</h2>
-        <p>
-          Feel free to reach out for collaborations, school projects, or discussions about technology and web development! You can connect with me through my student email or social channels.
-          Email:shanepajuyo286@gmail.com
-        </p>
-      </section>
-
-    </div>
-
+    <!-- Footer -->
     <footer>
-      <p>&copy; 2026 Personal Portfolio. Built with HTML & CSS.</p>
+        <p>&copy; 2026 Personal Portfolio. Built with HTML & CSS.</p>
     </footer>
-
-  </div>
 
 </body>
 </html>
+
+<style>
+/* Monochrome Blush & Soft Dusty Pink Palette */
+:root {
+    --bg-main: #fcf4f5;            /* Soft blush backdrop */
+    --bg-card: #f9e6e8;            /* Pastel rose card container */
+    --bg-tint: #f6dbde;            /* Deeper blush section background */
+    --bg-box: #f2cecf;             /* Inner highlight panel */
+    
+    --text-main: #6e464c;          /* Deep warm rose-brown header text */
+    --text-muted: #8b6267;         /* Soft muted rose text */
+    
+    --accent-pink: #dfa7ad;        /* Soft dusty pink accent */
+    --accent-dark-pink: #c78890;   /* Deep dusty rose highlight */
+    --accent-badge: #e6b8bd;       /* Badge highlight background */
+    
+    --border-color: #eed0d3;
+    --card-shadow: 0 15px 35px -5px rgba(110, 70, 76, 0.08);
+    --radius: 20px;
+}
+
+/* Global Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 88%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.bg-tint {
+    background-color: var(--bg-tint);
+}
+
+/* Glassmorphism/Monochrome Panel Utility */
+.glass-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    border-radius: var(--radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -8px rgba(110, 70, 76, 0.12);
+}
+
+/* Section Header Structure */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-tag {
+    display: inline-block;
+    background-color: var(--accent-badge);
+    color: var(--text-main);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 2.3rem;
+    color: var(--text-main);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Header & Navbar */
+header {
+    background: rgba(252, 244, 245, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.logo .dot {
+    color: var(--accent-dark-pink);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-dark-pink);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent-badge);
+    color: var(--text-main);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-dark-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(199, 136, 144, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.gradient-text {
+    color: var(--text-main);
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-dark-pink);
+    color: #ffffff;
+    box-shadow: 0 10px 20px -5px rgba(199, 136, 144, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #b5777f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-badge);
+    transform: translateY(-2px);
+}
+
+/* Image Frame */
+.hero-image-wrapper {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    position: relative;
+    padding: 12px;
+    background: var(--bg-card);
+    border-radius: 28px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.hero-img {
+    width: 280px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* About Section */
+.about-card {
+    padding: 50px;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 45px;
+    line-height: 1.9;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-box {
+    background: var(--bg-box);
+    padding: 35px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+
+.info-box h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.achievements-list {
+    list-style: none;
+}
+
+.achievements-list li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.achievements-list li:last-child {
+    margin-bottom: 0;
+}
+
+.cert-preview-container {
+    margin-top: 14px;
+}
+
+.cert-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.cert-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 20px rgba(110, 70, 76, 0.08);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cert-img:hover {
+    transform: scale(1.02);
+}
+
+/* Skills Section */
+.skill-highlight {
+    padding: 50px;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: var(--accent-dark-pink);
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.skill-highlight p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+/* Projects / Experience Section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.card {
+    padding: 35px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-dark-pink);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.sample-project {
+    padding: 40px;
+    border-left: 6px solid var(--accent-dark-pink);
+}
+
+.sample-project .tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-main);
+    background: var(--accent-badge);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.sample-project h3 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin: 12px 0 10px;
+    font-weight: 700;
+}
+
+.sample-project p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* Contact Section */
+.contact-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+.email-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.email-details {
+    text-align: center;
+}
+
+.email-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.email-details a {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.email-details a:hover {
+    color: var(--accent-dark-pink);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 35px 0;
+    background-color: var(--bg-main);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .about-card, .skill-highlight, .card, .sample-project {
+        padding: 30px 20px;
+    }
+
+    .email-box {
+        display: block;
+        padding: 20px;
+        border-radius: var(--radius);
+        width: 100%;
+    }
+
+    .email-details {
+        text-align: center;
+    }
+}
+
+</style>
